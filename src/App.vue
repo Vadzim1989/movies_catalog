@@ -34,7 +34,9 @@ export default {
     getMovies() {
       fetch(`https://www.omdbapi.com/?i=tt3896198&apikey=8523cbb8&s=${this.filterMovies}&page=${this.page}`)
       .then(res => res.json())
-      .then(json => this.movies = json)
+      .then(json => {
+        this.movies = json
+        })
     }
   },
   created() {
@@ -47,11 +49,10 @@ export default {
     });
     this.$on('page-up', () => {
       this.page++;
-    });
-    this.getMovies();
+    })
   },
   watch: {
-    'movies': 'getMovies'
+    'filterMovies': 'getMovies'
   }
 }
 </script>

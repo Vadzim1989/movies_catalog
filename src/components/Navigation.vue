@@ -1,7 +1,9 @@
 <template>
     <div class="nav_wrapper">
         <h1>Movies Catalog</h1>
-        <input type="text" v-model="$parent.filterMovies">
+        <input  type="text" 
+                v-model="$parent.filterMovies"
+                @change="$parent.$emit('find-movies')">
         <div class="user_info">
             <img src="../assets/account.png" alt="logo" class="user_logo">
             <span>Vadim Denisovski</span>
