@@ -30,4 +30,10 @@
         width: 100%;
         margin-top: 2%;
     }
+    .movie{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+    }
 </style>

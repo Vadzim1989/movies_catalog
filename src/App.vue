@@ -1,7 +1,7 @@
 <template>
   <div class="movies_catalog">
     <Navigation/>
-    <p v-if="filterMovies.length">You searched for: {{filterMovies}}, {{movies.totalResults}} results found</p>
+    <p v-if="filterMovies.length">You searched for: <span class="filter_movie">{{filterMovies}}</span>, {{movies.totalResults}} results found</p>
     <div class="movies_wrapper">
       <Movies 
         v-bind:movies="movies"
@@ -76,5 +76,13 @@ body {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
+}
+p {
+  font-weight: 500;
+  padding-left: 2.7%;
+  font-size: 1.1rem;
+}
+.filter_movie {
+  font-weight: bold;
 }
 </style>
