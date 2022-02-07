@@ -52,7 +52,8 @@ export default {
     })
   },
   watch: {
-    'filterMovies': 'getMovies'
+    'filterMovies': 'getMovies',
+    'page': 'getMovies'
   }
 }
 </script>
