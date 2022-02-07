@@ -2,14 +2,23 @@
     <div class="nav_wrapper">
         <h1>Movies Catalog</h1>
         <input  type="text" 
-                v-model="$parent.filterMovies"
-                @change="$parent.$emit('find-movies')">
+                v-model="$parent.filterMovies">
         <div class="user_info">
             <img src="../assets/account.png" alt="logo" class="user_logo">
             <span>Vadim Denisovski</span>
         </div>
     </div>
 </template>
+
+<script>
+export default {
+    methods: {
+        getData(e) {
+            return e.currentTarget.value
+        }
+    }
+}
+</script>
 
 
 <style scoped>
